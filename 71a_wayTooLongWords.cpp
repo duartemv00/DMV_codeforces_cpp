@@ -15,17 +15,17 @@ int main(){
     int numberOfWords;
     std::cin >> numberOfWords;
 
-    std::string word[numberOfWords];
+    std::string words[numberOfWords];
 
     for(int i = 0; i < numberOfWords; i++){
-        std::cin >> word[i];
+        std::cin >> words[i];
     }
 
     for(int i = 0; i < numberOfWords; i++){
-        word[i].size() > 10 ? std::cout <<
-            word[i][0] << // First letter
-                word[i].size() - 2 << // Number of letters between the first and last
-                    word[i][word[i].size() - 1] << '\n' // Last letter
-        : std::cout << word[i] << '\n'; // The word itself
+        words[i].size() > 10 ? std::cout <<
+            words[i][0] << // First letter
+                words[i].size() - 2 << // Number of letters between the first and last
+                    words[i][words[i].size() - 1] << '\n' // Last letter
+        : std::cout << words[i] << '\n'; // The word itself
     }
 }

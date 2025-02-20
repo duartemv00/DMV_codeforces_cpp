@@ -14,15 +14,15 @@
 
 int main(){
     std::string word; std::cin >> word;
-    int upper = 0, lower = 0;
-    for (char i : word){
-        if (isupper(i)) upper++;
-        else lower++;
+    int upperLetters = 0, lowerLetters = 0;
+    for (char letter : word){
+        if (isupper(i)) upperLetters++;
+        else lowerLetters++;
     }
-    if (upper > lower){
-        for (char& i : word) i = toupper(i);
+    if (upperLetters > lowerLetters){
+        for (char& letter : word) letter = toupper(letter);
     } else {
-        for (char& i : word) i = tolower(i);
+        for (char& letter : word) letter = tolower(letter);
     }
 
     std::cout << word;

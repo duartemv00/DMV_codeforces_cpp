@@ -13,14 +13,15 @@
 #include <iostream>
 
 int main(){
-    int w = 0;
-    std::cin >> w;
+    int weigth = 0;
+    std::cin >> weigth;
 
-    const int half = w/2;
+    const int halfWeight = weigth/2;
 
     // Both halves even or both halves odd are the valid options because 2 odd numbers can be modified to become 2 even numbers
     // half <1 is not valid because it is odd and can't move weight from one part to the other
-    if(half > 1 && ((half%2 == 0 && (w-half)%2 == 0) || (half%2 != 0 && (w-half)%2 != 0))){
+    if(halfWeight > 1
+        && ((halfWeight%2 == 0 && (weigth-halfWeight)%2 == 0) || (halfWeight%2 != 0 && (weigth-halfWeight)%2 != 0))){
       std::cout << "YES";
     } else {
         std::cout << "NO";
